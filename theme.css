@@ -1,0 +1,18 @@
+/* Muted surfaces reduce bright areas; dark ink keeps small text readable. */
+:root{
+  --page:#b7c2b1;
+  --sage:#c4ceb9;
+  --surface:#cdd5c4;
+  --control:#d2dac9;
+  --ink:#273d31;
+  --muted:#3e503a;
+  --accent:#354f3b;
+  --accent-hover:#29432f;
+  --on-accent:#e8eddf;
+  --border:#596c52;
+  --rule:#98a78d;
+  --focus:#704823;
+  --scroll-thumb:#65795d;
+  color:var(--ink);
+  background:var(--page);
+}

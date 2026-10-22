@@ -10,6 +10,7 @@ const files = new Map([
   ['/debug-mode.js', ['debug-mode.js', 'text/javascript']],
   ['/debug-mode.css', ['debug-mode.css', 'text/css']],
   ['/style.css', ['style.css', 'text/css']],
+  ['/theme.css', ['theme.css', 'text/css']],
   ['/app.js', ['app.js', 'text/javascript']],
   ...['gaze.js', 'animal-art.js', 'animals-extended.js', 'animals-more.js', 'habitats.js'].map(name => ['/' + name, [name, 'text/javascript']]),
   ['/animals.js', ['animals.js', 'text/javascript']],

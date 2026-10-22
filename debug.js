@@ -88,7 +88,7 @@ $('letter-filter').addEventListener('change', filter);
 $('background').addEventListener('change', () => document.documentElement.style.setProperty('--preview-bg', $('background').value));
 $('grayscale').addEventListener('change', () => document.body.classList.toggle('grayscale', $('grayscale').checked));
 $('reset').addEventListener('click', () => {
-  $('search').value = ''; $('letter-filter').value = ''; $('background').value = '#e8eddf'; $('grayscale').checked = false;
+  $('search').value = ''; $('letter-filter').value = ''; $('background').value = '#c4ceb9'; $('grayscale').checked = false;
   $('scenery').checked = true; redraw();
   document.documentElement.style.removeProperty('--preview-bg'); document.body.classList.remove('grayscale'); filter();
 });

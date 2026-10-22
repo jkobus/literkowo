@@ -29,12 +29,12 @@ const tree = (x,y,s=1) => `<g transform="translate(${x} ${y}) scale(${s})">${p('
 const grass = (x,y,c='#8fa571') => stroke(`M${x} ${y}l-8-18m8 18 3-24m-3 24 12-13`,c,3);
 const reed = (x,y) => stroke(`M${x} ${y}v-68m0 50q-17-32-24-28m24 37q17-34 24-29`,'#6f956d',3)+stroke(`M${x} ${y-67}v-16`,'#a48250',6);
 const palettes = {
-  desert:['#f7ecd8','#e4c38f'],
-  forest:['#e4eee4','#bdcf9d'], farm:['#e9f1ec','#c8d6a0'], meadow:['#eaf2e7','#d4dea9'],
-  savanna:['#f6edd4','#e3cc8d'], jungle:['#e0ede4','#bad2a4'], bamboo:['#e7f0df','#c7d8a6'],
-  ocean:['#dbedf0','#c2dfe5'], shore:['#e1eef0','#eadcba'], polar:['#dceaf0','#f2f6f3'],
-  pond:['#e5efdf','#c8d9b0'], river:['#e1ece1','#c7d6ae'], outback:['#f2ebd7','#e5c5a0'],
-  home:['#f2e9dc','#dfc9ae'], garden:['#e8efdf','#c9d6a7'],
+  desert:['#d8cbb2','#cfb17f'],
+  forest:['#c7d6c4','#acbe8d'], farm:['#ccd9ca','#b8c68d'], meadow:['#cdd9c3','#bfcb94'],
+  savanna:['#d8cba7','#cdb77b'], jungle:['#c2d4c3','#a8c091'], bamboo:['#cbd7bd','#b3c493'],
+  ocean:['#bdd4d5','#a7c5ca'], shore:['#c3d5d5','#d0c2a2'], polar:['#becfd5','#d4dfd8'],
+  pond:['#c8d6bc','#b3c69b'], river:['#c3d2bf','#b2c29a'], outback:['#d6cbb0','#ccad89'],
+  home:['#d6cbb8','#c6af94'], garden:['#cbd5be','#b4c294'],
 };
 export function habitatArt(animal) {
   const {id} = habitatFor(animal), [sky, ground] = palettes[id];
@@ -50,8 +50,8 @@ export function habitatArt(animal) {
     art += e(46,78,44,13,'#a5b17a')+e(72,88,28,10,'#a5b17a')+grass(26,239,'#b99f60')+grass(332,234,'#b99f60');
   } else if (id === 'desert') {
     art += e(307,44,20,20,'#e6c37d');
-    art += p('M0 187Q67 132 148 183T370 172V270H0Z','#ecd2a7');
-    art += p('M0 224Q104 193 205 225T370 215V270H0Z','#dfbd86');
+    art += p('M0 187Q67 132 148 183T370 172V270H0Z','#d6bc93');
+    art += p('M0 224Q104 193 205 225T370 215V270H0Z','#c7a774');
     art += grass(28,245,'#aa905e')+grass(337,238,'#aa905e')+e(312,250,10,4,'#b69a6a');
   } else if (id === 'farm') {
     art += p('M3 123H74V180H3Z','#bd8170')+p('M0 124L39 89L80 124Z','#886d5c')+p('M29 147H49V180H29Z','#f4e8cf');
@@ -68,16 +68,16 @@ export function habitatArt(animal) {
     art += e(38,90,5,5,'#f0f8f5')+e(325,118,7,7,'#f0f8f5')+e(336,98,3,3,'#f0f8f5');
   } else if (id === 'polar') {
     art += p('M0 181L47 120L98 181L128 156L168 191L270 177L311 130L370 174V219H0Z','#bed5df');
-    art += p('M0 220Q89 200 185 222T370 212V270H0Z','#f7faf5')+stroke('M10 252h65m217-8h64','#b6d2dc',2);
+    art += p('M0 220Q89 200 185 222T370 212V270H0Z','#dce6dc')+stroke('M10 252h65m217-8h64','#b6d2dc',2);
   } else if (['pond','river','shore'].includes(id)) {
     art += p('M0 194Q75 204 145 193T370 192V254Q285 238 190 253T0 251Z','#b3d3d5');
     art += stroke('M4 216h44m260 6h54M22 237h38','#e8f2e5',2);
     if (id !== 'shore') art += reed(28,247)+reed(343,242)+e(62,229,17,5,'#8eae7b');
     else art += p('M8 249l8-8 9 7-8 8Z','#bd9f7d')+e(335,251,12,5,'#c4af8c');
   } else if (id === 'home') {
-    art += p('M0 205H370V270H0Z','#dfc9ae')+stroke('M0 205H370','#bba589',3);
-    art += '<rect x="20" y="35" width="58" height="70" rx="8" fill="#faf5e9" stroke="#c7ae8a" stroke-width="4"/>';
-    art += p('M26 41H72V99H26Z','#c5dfe0')+stroke('M49 41V99M26 70H72','#faf5e9',4)+e(185,233,125,20,'#d4bba1');
+    art += p('M0 205H370V270H0Z','#c6af94')+stroke('M0 205H370','#bba589',3);
+    art += '<rect x="20" y="35" width="58" height="70" rx="8" fill="#dfd9c6" stroke="#c7ae8a" stroke-width="4"/>';
+    art += p('M26 41H72V99H26Z','#c5dfe0')+stroke('M49 41V99M26 70H72','#dfd9c6',4)+e(185,233,125,20,'#d4bba1');
     art += p('M316 182h27l-4 25h-19Z','#b68369')+stroke('M330 183v-35','#819776',4)+e(319,153,12,6,'#8ea680')+e(341,141,12,6,'#8ea680');
   } else {
     art += grass(25,239)+grass(338,242)+e(24,178,31,22,'#acc395')+e(351,178,26,20,'#acc395');
