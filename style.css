@@ -29,6 +29,7 @@ body.playing .parent-button.holding{opacity:1}
 /* The session clock belongs to the parent; no flashing or countdown sounds. */
 .session-clock{font-variant-numeric:tabular-nums;font-size:11px;color:var(--muted);border-left:1px solid var(--rule);padding-left:12px;margin-left:4px;white-space:nowrap}
 body{background:var(--page);transition:background-color 3s ease}
+body.playing{background:#b7c2b1}
 body.sleeping{background:#182832;color:#e3e4d5}
 body.sleeping main{display:block;min-height:100svh;padding:0;max-width:none}
 body.sleeping .topbar{position:absolute;inset:0 0 auto;max-width:none;padding:20px 5%;z-index:5}
